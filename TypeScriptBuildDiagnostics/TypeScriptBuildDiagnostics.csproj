@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TypeScriptToolsVersion>3.4</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0-preview5-19227-01" />
+    <!-- Comment for stackoverflow diagnostics: This package offered by VS 2019 IDE to reference in a warnning 
+    If I reference it, then build builds always builds the entire project unconditionally, If I do not
+    reference it, then modifying .ts file does not recognized as change, and build thinks all is up to date...
+    -->
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="3.5.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
